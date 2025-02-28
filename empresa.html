@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="image/favicon_virtus.svg">
+    <title>Sobre a Empresa - Virtus</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <section class="top-menu animate-in" id="top-menu" ></section>
+     <section class="container-menu">
+         <a href="#" class="logo"> <img src="image/logo_horizontal_azul.png" alt="Logo" class="logo-img"> </a>
+         
+         <!-- Botão do menu sanduíche -->
+         <button class="menu-toggle">
+             <i class="fa-solid fa-bars"></i>
+         </button>
+         
+         <nav class="navbar">
+            <a href="index.html#top-menu">Home</a>
+            <a href="empresa.html">Empresa</a>
+            <a href="index.html#produtos">Produtos</a>
+            <a href="index.html#marcas">Motadoras</a>
+            <a href="index.html#review">Avaliações</a>  
+         </nav>
+         
+         <!-- Botão que abre o modal -->
+         <button class="open-modal-btn abrir-modal">Solicitar Orçamento</button>
+         
+         <!-- Ícone de contato com tooltip -->
+         <div class="contact-icon">
+             <i class="fa-solid fa-phone-volume"></i>
+             <div class="tooltip">
+                 <a href="https://wa.me/5501142000094" target="_blank">
+                     <i class="fa-brands fa-whatsapp"></i> +55 27 99999-9999
+                 </a>
+                 <a href="mailto:contato@virtus.com">
+                     <i class="fas fa-envelope"></i> contato@virtus.com
+                 </a>
+                 <a><i class="fas fa-clock"></i> Atendimento: 8h às 18h</a>
+             </div>
+         </div>
+ 
+         <!-- Modal -->
+         <div class="modal-overlay">
+             <div class="modal">
+                 <span class="close-modal">&times;</span>
+                 <h2>Solicitar Orçamento</h2>
+                 <form id="quote-form">
+                     <label for="name">Nome:</label>
+                     <input type="text" id="name" required>
+ 
+                     <label for="cnpj">CNPJ:</label>
+                     <input type="text" id="cnpj" required maxlength="18" placeholder="00.000.000/0000-00">
+                     <p id="resultado" class="resultado"></p>
+ 
+                     <label for="email">Email:</label>
+                     <input type="email" id="email" required>
+ 
+                     <label for="phone">Telefone:</label>
+                     <input type="tel" id="phone" required>
+ 
+                     <label for="peca">Peça/Acessório:</label>
+                     <input type="text" id="peca">
+ 
+                     <button type="submit" class="whatsapp-submit">Solicitar Orçamento</button>
+                 </form>
+             </div>
+         </div>
+ 
+     </section>
+ </header>
+
+<!-- Seção Empresa -->
+
+<section class="home-empresa" id="home-empresa">
+
+    <div class="content">
+        <h3>Sobre a Empresa</h3>
+        <p>Somos a <strong>Virtus</strong>, especializada no comércio e importação de peças automotivas para veículos premium, garantindo qualidade, agilidade e um atendimento personalizado, criando valor para nossos clientes.</p>
+        <p><strong>Nossa missão</strong> é oferecer faróis, lanternas e retrovisores de alta qualidade para veículos premium, garantindo confiabilidade, segurança, atendimento especializado e eficiente. Comprometemo-nos a atender às necessidades dos nossos clientes com peças selecionadas, fornecidas com agilidade e profissionalismo.</p>
+        <p><strong>Nossa visão</strong> é nos tornarmos a principal referência no fornecimento de faróis, lanternas e retrovisores para veículos premium no Brasil até 2030, estabelecendo parcerias estratégicas, expandindo nossa presença no mercado e alcançando um crescimento sustentável com excelência em qualidade e atendimento.</p>
+        <p></p>
+    </div>
+
+</section>
+
+
+<section class="features" id="features">
+
+    <h1 class="heading"> Nossos Valores </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/compromisso_qualidade.jpeg" alt="Imagem Compromisso e Qualidade">
+            <h3>Compromisso com a Qualidade:</h3>
+            <p>Garantir que todas as peças fornecidas atendam aos mais altos padrões de excelência, refletindo nossa dedicação à segurança e funcionalidade dos veículos premium.</p>
+        </div>
+
+        <div class="box">
+            <img src="image/foco_cliente.jpeg" alt="Imagem Foco no Cliente">
+            <h3>Foco no Cliente:</h3>
+            <p>Priorizar as necessidades dos clientes, oferecendo um atendimento ágil, eficiente e personalizado que construa confiança e fidelidade.</p>
+        </div>
+
+        <div class="box">
+            <img src="image/eficiencia_operacional.jpeg" alt="Imagem Eficiência Operacional">
+            <h3>Eficiência Operacional:</h3>
+            <p>Trabalhar com processos otimizados para garantir entregas rápidas, confiáveis e dentro dos prazos, contribuindo para alcançar nossas metas e visão.</p>
+        </div>
+
+        <div class="box">
+            <img src="image/etica_transparencia.jpeg" alt="">
+            <h3>Ética e Transparência:</h3>
+            <p>Manter relações honestas e éticas com clientes, parceiros e fornecedores, promovendo confiança mútua em todas as interações.</p>
+        </div>
+
+        <div class="box">
+            <img src="image/inovacao_evolucao.jpeg" alt="">
+            <h3>Inovação e Evolução:</h3>
+            <p>Buscar constantemente melhorar nossos processos, produtos e serviços, acompanhando as demandas e tendências do mercado automotivo premium.</p>
+        </div>
+
+        <div class="box">
+            <img src="image/parcerias_estrategicas.jpeg" alt="">
+            <h3>Parcerias Estratégicas:</h3>
+            <p>Estabelecer e manter relações sólidas com fornecedores e parceiros locais para fortalecer nossa posição no mercado.</p>
+        </div>
+
+        <div class="box">
+            <img src="image/valorizacao_pessoas.jpeg" alt="">
+            <h3>Valorização das Pessoas:</h3>
+            <p>Reconhecer que nossa equipe é o coração do negócio, promovendo um ambiente de trabalho colaborativo, respeitoso e comprometido com o desenvolvimento pessoal e profissional.</p>
+        </div>
+
+        <div class="box">
+            <img src="image/responsabilidade_social.jpeg" alt="">
+            <h3>Responsabilidade Social:</h3>
+            <p>Acreditamos no poder de fazer a diferença. Por isso, nos comprometemos a contribuir com ações sociais, reafirmando nosso compromisso com o bem-estar social e um futuro mais justo.</p>
+        </div>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div class="container-footer">
+        <!-- Coluna 1: Logo e descrição -->
+        <div class="footer-box">
+            <a href="#" class="logo"> 
+                <img src="image/logo_virtus_branco.svg" alt="Logo Virtus">
+            </a>
+            <p class="slogan-footer">Excelência em peças premium para quem valoriza qualidade.</p>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        
+        <!-- Coluna 3: Contato -->
+        <div class="footer-box">
+            <h3 class="contato-footer">Contato</h3>
+            <div class="contato">
+                <p><i class="fas fa-phone"></i> +55 011 4200-0094</p>
+                <p><i class="fas fa-envelope"></i> virtus@virtusimportacao.com.br</p>
+                <p><i class="fas fa-map-marker-alt"></i> São Paulo - SP, Brasil</p>
+            </div>
+        </div>
+
+        <!-- Coluna 4: Redes Sociais -->
+        <div class="footer-box">
+            <h3>Siga-nos</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/virtusimport_oficial?igsh=MXdyN203cHozeTB3"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <h3>Formas de Pagamento</h3>
+            <div class="share">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-pix"></i>
+                <i class="fa-solid fa-barcode"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Virtus. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+
+<section id="whatsapp-icon-link">
+    <a href="https://wa.me/5501142000094?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20produtos.%20Poderia%20me%20ajudar?" 
+       target="_blank">
+        <figure>
+            <img id="whatsapp-icon" alt="Widget WhatsApp" 
+                 src="image/whatsapp.png" 
+                 style="width: 60px; height: 61px;">
+        </figure>
+    </a>
+    <div id="whatsapp-message">Ainda não achou sua peça? Fale conosco!</div>
+</section>
+
+<!-- Botão de voltar ao topo -->
+<button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
