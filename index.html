@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="image/favicon_virtus.svg">
+    <title>Virtus</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+   <section class="top-menu animate-in" id="top-menu" ></section>
+    <section class="container-menu">
+        <a href="#" class="logo"> <img src="image/logo_horizontal_azul.png" alt="Logo" class="logo-img"> </a>
+        
+        <!-- Botão do menu sanduíche -->
+        <button class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        
+        <nav class="navbar">
+            <a href="#top-menu">Home</a>
+            <a href="empresa.html">Empresa</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#montadoras">Montadoras</a>
+            <a href="#review">Avaliações</a>      
+        </nav>
+        
+        <!-- Botão que abre o modal -->
+        <button class="open-modal-btn abrir-modal">Solicitar Orçamento</button>
+        
+        <!-- Ícone de contato com tooltip -->
+        <div class="contact-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div class="tooltip">
+                <a href="https://wa.me/5501142000094" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> +55 27 99999-9999
+                </a>
+                <a href="mailto:contato@virtus.com">
+                    <i class="fas fa-envelope"></i> contato@virtus.com
+                </a>
+                <a><i class="fas fa-clock"></i> Atendimento: 8h às 18h</a>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal-overlay">
+            <div class="modal">
+                <span class="close-modal">&times;</span>
+                <h2>Solicitar Orçamento</h2>
+                <form id="quote-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text" id="cnpj" required maxlength="18" placeholder="00.000.000/0000-00">
+                    <p id="resultado" class="resultado"></p>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" required>
+
+                    <label for="peca">Peça/Acessório:</label>
+                    <input type="text" id="peca">
+
+                    <button type="submit" class="whatsapp-submit">Solicitar Orçamento</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+</header>
+
+<section class="home animate-in" id="home">
+    <div class="slider-container">
+        <div class="slider">
+            <img src="image/banner_virtus.svg" alt="Banner 1" class="slide active">
+            <video class="slide" muted autoplay loop playsinline>
+                <source src="videos/video_farol3.mp4" type="video/mp4">
+            </video>
+            <video class="slide" muted autoplay loop playsinline>
+                <source src="videos/video_farol.mp4" type="video/mp4">
+            </video>
+            <img src="image/6.svg" alt="Banner 6" class="slide">      
+            <img src="image/imagem_slider7.jpeg" class="slide">
+            <img src="image/5.svg" alt="Banner 5" class="slide">
+            <img src="image/imagem_slider11.jpeg" class="slide">
+            <img src="image/imagem_slider12.jpeg" class="slide">
+            <img src="image/imagem_slider10.jpeg" class="slide">
+            <img src="image/imagem_slider13.jpeg" class="slide">
+        </div>
+
+        <!-- Botões de navegação -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+</section>
+
+
+<!-- home section ends -->
+
+
+<h1 class="slogan">Virtus: Excelência em peças premium​ para quem valoriza qualidade.​</h1>
+
+<section class="beneficios animate-in" id="beneficios">
+    <ul class="container">
+        <li class="benefit focus">
+            <article class="benefit-wrapper">
+                <img src="image/icon-qualidade.svg" alt="icon-qualidade">
+                <div class="container-beneficios">
+                    <h2>Qualidade de Serviço</h2>
+                    <p>Produtos de altíssima qualidade e peças genuínas</p>
+                </div>
+            </article>
+        </li>
+        <li class="benefit focus">
+            <article class="benefit-wrapper">
+                <img src="image/icon-atendimento.svg" alt="icon-atendimento">
+                <div class="container-beneficios">
+                    <h2>Atendimento Personalizado</h2>
+                    <p>Compromisso com a experiência do cliente</p>
+                </div>
+            </article>
+        </li>
+        <li class="benefit focus">
+            <article class="benefit-wrapper">
+                <img src="image/icon-equipe.svg" alt="icon-equipe">
+                <div class="container-beneficios">
+                    <h2>Equipe Capacitada e Experiente</h2>
+                    <p>Profissionais com vasta experiência no mercado auto e segurador</p>
+                </div>
+            </article>
+        </li>
+        <li class="benefit focus">
+            <article class="benefit-wrapper">
+                <img src="image/icon-parceria.svg" alt="icon-qualidade">
+                <div class="container-beneficios">
+                    <h2>Parceiros Diversificados</h2>
+                    <p>Integrações com parceiros estratégicos</p>
+                </div>
+            </article>
+        </li>
+        <li class="benefit focus">
+            <article class="benefit-wrapper">
+                <img src="image/icon-encomenda.svg" alt="icon-encomenda">
+                <div class="container-beneficios">
+                    <h2>Encomenda sobre Demanda</h2>
+                    <p>Atendemos pedidos personalizados conforme sua necessidade</p>
+                </div>
+            </article>
+        </li>
+        
+    </ul>
+    
+</section>
+
+<section class="produtos animate-in section-animate" id="produtos">
+
+    <h1 class="heading">Produtos em Destaque</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="image/produto4.jpeg" alt="Lanterna lado esquerdo Land Rover Discovery 5 18/21">
+            <h3>Lanterna lado esquerdo Land Rover Discovery 5 18/21</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Valeo</h4>
+                <h4>Partnumber: HY3213405CF</h4>
+                <h4>Código Virtus: 65561125</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+         
+        <div class="box">
+            <img src="image/produto1.jpeg" alt="Lanterna lado direito Volvo XC90 17/23 com LED">
+            <h3>Lanterna lado direito Volvo XC90 17/23 c/LED</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Valeo</h4>
+                <h4>Partnumber: 31655916</h4>
+                <h4>Código Virtus: 65561113</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto2.jpeg" alt="Lanterna lado esquerdo Porsche Macan 20/24 com LED">
+            <h3>Lanterna lado esquerdo Porsche Macan 20/24 c/LED</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Valeo</h4>
+                <h4>Partnumber: 95B945091AM</h4>
+                <h4>Código Virtus: 65561116</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto3.jpeg" alt="Farol lado esquerdo Audi A5 20/23 com Xenon e LED">
+            <h3>Farol lado esquerdo Audi A5 20/23 c/Xenon c/LED</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Genuíno</h4>
+                <h4>Partnumber: 8W6941085</h4>
+                <h4>Código Virtus: 55561175</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto10.jpeg" alt="Farol lado esquerdo Land Rover Discovery SPT 15/18 com Xenon e LED">
+            <h3>Farol lado esquerdo Land Rover Discovery SPT 15/18 c/Xenon c/LED</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Genuíno</h4>
+                <h4>Partnumber: FK7213W030EF</h4>
+                <h4>Código Virtus: 55561169</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto5.jpeg" alt="Farol lado esquerdo Mercedes E200 12/14 com Xenon e LED Bixenon">
+            <h3>Farol lado esquerdo Mercedes E200 12/14 c/Xenon c/LED Bixenon</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Hella</h4>
+                <h4>Partnumber: A2128200939</h4>
+                <h4>Código Virtus: 55561160</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto6.jpeg" alt="Farol lado esquerdo Porsche Panamera 22/24 com Xenon e LED">
+            <h3>Farol lado esquerdo Porsche Panamera 22/24 c/Xenon c/LED</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Hella</h4>
+                <h4>Partnumber: 1EX01225411</h4>
+                <h4>Código Virtus: 55561153</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto7.jpeg" alt="Farol lado direito Land Rover Discovery 4 19/22 com Xenon e LED 9P">
+            <h3>Farol lado direito Land Rover Discovery 4 19/22 c/Xenon c/LED 9P</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Valeo</h4>
+                <h4>Partnumber: 33150T00Y133</h4>
+                <h4>Código Virtus: 55561149</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto8.jpeg" alt="Farol lado direito Mercedes C200 Full LED 2018/2020">
+            <h3>Farol lado direito Mercedes C200 Full LED 2018/2020</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Hella</h4>
+                <h4>Partnumber: 2059066204</h4>
+                <h4>Código Virtus: 55561141</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto11.jpeg" alt="Retrovisor lado direito Jeep Compass 17/24 com Retrátil e Luz">
+            <h3>Retrovisor lado direito Jeep Compass 17/24 c/Retrátil c/Luz</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Mopar</h4>
+                <h4>Partnumber: 53467402</h4>
+                <h4>Código Virtus: 65561111</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto12.jpeg" alt="Retrovisor lado direito Audi Q3 11/16 com Retrátil">
+            <h3>Retrovisor lado direito Audi Q3 11/16 c/Retrátil</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: SMR</h4>
+                <h4>Partnumber: 8U1857410F</h4>
+                <h4>Código Virtus: 65561123</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto14.jpeg" alt="Retrovisor lado direito Dodge Ram2500 19/24 com Câmera e Sensor (sem Pisca)">
+            <h3>Retrovisor lado direito Dodge Ram2500 19/24 c/Câmera c/Sensor (s/Pisca)</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Mopar</h4>
+                <h4>Partnumber: RT10526X</h4>
+                <h4>Código Virtus: 65561146</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto16.jpeg" alt="Lanterna para Mala lado direito Jeep Compass 22/24">
+            <h3>Lanterna p/Mala lado direito Jeep Compass 22/24</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Mopar</h4>
+                <h4>Partnumber: 53483558</h4>
+                <h4>Código Virtus: 65561148</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto17.jpeg" alt="Lanterna lado direito Toyota Hilux 16/18 Vermelho">
+            <h3>Lanterna lado direito Toyota Hilux 16/18 Vermelho</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Koito</h4>
+                <h4>Partnumber: 815610K271</h4>
+                <h4>Código Virtus: 65561112</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto18.jpeg" alt="Farol lado esquerdo Toyota Hilux 21/24 com Xenon e LED">
+            <h3>Farol lado esquerdo Toyota Hilux 21/24 c/Xenon c/LED</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Koito</h4>
+                <h4>Partnumber: 81110-0KU60</h4>
+                <h4>Código Virtus: 55561156</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+    
+        <div class="box">
+            <img src="image/produto19.jpeg" alt="Farol lado esquerdo Land Rover Discovery SPT 15/18 com Xenon e LED">
+            <h3>Farol lado esquerdo Land Rover Discovery SPT 15/18 c/Xenon c/LED</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Genuíno</h4>
+                <h4>Partnumber: FK7213W030EF</h4>
+                <h4>Código Virtus: 55561169</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+
+        <div class="box">
+            <img src="image/produto20.jpeg" alt="Lanterna Lado Direito Audi Q5 18/24 Plug Preto">
+            <h3>Lanterna Lado Direito Audi Q5 18/24 Plug Preto</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Valeo</h4>
+                <h4>Partnumber: 80A945093B</h4>
+                <h4>Código Virtus: 65561127</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+        
+        <div class="box">
+            <img src="image/produto21.jpeg" alt="Retrovisor Lado Direito Toyota SW4 23/24 C/Retrátil">
+            <h3>Retrovisor Lado Direito Toyota SW4 23/24 C/Retrátil</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Metagal</h4>
+                <h4>Partnumber: 87910-0K040</h4>
+                <h4>Código Virtus: 65561150</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+        
+        <div class="box">
+            <img src="image/produto22.jpeg" alt="Retrovisor Lado Esquerdo Land Rover Evoque 17/23 C/Retrátil C/Luz C/Câmera (S/Capa)">
+            <h3>Retrovisor Lado Esquerdo Land Rover Evoque 17/23 C/Retrátil C/Luz C/Câmera (S/Capa)</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: SMR</h4>
+                <h4>Partnumber: GR27728</h4>
+                <h4>Código Virtus: 65561121</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+        
+        <div class="box">
+            <img src="image/produto23.jpeg" alt="Lanterna Lado Direito Volvo XC60 2017/2023">
+            <h3>Lanterna Lado Direito Volvo XC60 2017/2023</h3>
+            <div class="especificacao-produto">
+                <h4>Fabricante: Hella</h4>
+                <h4>Partnumber: RT7338X</h4>
+                <h4>Código Virtus: 65561182</h4>
+            </div>
+            <button class="btn abrir-modal">Compre via WhatsApp</button>
+        </div>
+        
+    </div>
+    
+</section>
+
+<section class="mapa animate-in" id="mapa">
+    <h1 class="heading">Capilaridade e Fornecedores</h1>
+    <div class="fornecedores-container">
+        <div class="mapa-container">
+            <!-- 📍 Bloco do Mapa -->
+            <div class="map-container">
+                <img src="image/mapa_fornecedores_virtus.svg" alt="Mapa Virtus">
+                
+                <!-- Ícones de localização -->
+                <img src="image/location.svg" class="location location-usa" alt="Localização EUA">
+                <img src="image/location.svg" class="location location-germany" alt="Localização Alemanha">
+                <img src="image/location.svg" class="location location-france" alt="Localização França">
+                <img src="image/location.svg" class="location location-italy" alt="Localização Itália">
+                <img src="image/location.svg" class="location location-china" alt="Localização China">
+                <img src="image/location.svg" class="location location-korea" alt="Localização Coreia do Sul">
+                <img src="image/location.svg" class="location location-thailand" alt="Localização Tailândia">
+            </div>
+
+            <!-- 📍 Bloco do Texto -->
+            <div class="mapa-texto">
+                <div class="titulo-com-seta">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <h2>Capilaridade Global e Logística Eficiente</h2>
+                </div>
+                <p>Com uma rede de fornecedores espalhados pelo mundo, a Virtus tem a capacidade de entregar produtos de qualidade superior em tempo recorde. Nosso processo logístico é projetado para garantir que suas encomendas cheguem de forma segura e no prazo.</p>
+                
+                
+                <div class="titulo-com-seta">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <h2>Segurança e Confiabilidade</h2>
+                </div>
+                <p>Nosso compromisso é com a integridade das suas compras. A Virtus utiliza tecnologias avançadas de rastreamento e controles rigorosos em todas as etapas, garantindo que sua experiência de compra seja tranquila e sem imprevistos.</p>
+                
+                <div class="titulo-com-seta">
+                <i class="fa-solid fa-arrow-right"></i>
+                <h2>Atendimento Personalizado</h2>
+                </div>
+                <p>Nosso time está sempre à disposição para oferecer o melhor atendimento, adaptando-se às necessidades específicas de cada cliente. Com nossa capilaridade global, atendemos desde grandes demandas até soluções sob medida para qualquer tipo de encomenda.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="montadoras animate-in" id="montadoras">
+    <h1 class="heading"> Montadoras Parceiras</h1>
+    <div class="marquee">
+        <div class="marquee-content">
+            <img src="image/logo-audi.svg" alt="Logo Audi">
+            <img src="image/logo-bmw.svg" alt="Logo BMW">
+            <img src="image/logo-dodge.svg" alt="Logo Dodge">
+            <img src="image/logo-ferrari.svg" alt="Logo Ferrari">
+            <img src="image/logo-honda.svg" alt="Logo Honda">
+            <img src="image/logo-jaguar.svg" alt="Logo Jaguar">
+            <img src="image/logo-lamborghini.svg" alt="Logo Lamborghini">
+            <img src="image/logo-land-rover.svg" alt="Logo Land Rover">
+            <img src="image/logo-mercedes.svg" alt="Logo Mercedes">
+            <img src="image/logo-porsche.svg" alt="Logo Porsche">
+            <img src="image/logo-tesla.svg" alt="Logo Tesla">
+            <img src="image/logo-toyota.svg" alt="Logo Toyota">
+            <img src="image/logo-volvo.svg" alt="Logo Volvo">
+
+            <!-- Duplicação para o efeito de loop infinito -->
+            <img src="image/logo-audi.svg" alt="Logo Audi">
+            <img src="image/logo-bmw.svg" alt="Logo BMW">
+            <img src="image/logo-dodge.svg" alt="Logo Dodge">
+            <img src="image/logo-ferrari.svg" alt="Logo Ferrari">
+            <img src="image/logo-honda.svg" alt="Logo Honda">
+            <img src="image/logo-jaguar.svg" alt="Logo Jaguar">
+            <img src="image/logo-lamborghini.svg" alt="Logo Lamborghini">
+            <img src="image/logo-land-rover.svg" alt="Logo Land Rover">
+            <img src="image/logo-mercedes.svg" alt="Logo Mercedes">
+            <img src="image/logo-porsche.svg" alt="Logo Porsche">
+            <img src="image/logo-tesla.svg" alt="Logo Tesla">
+            <img src="image/logo-toyota.svg" alt="Logo Toyota">
+            <img src="image/logo-volvo.svg" alt="Logo Volvo">
+        </div>
+    </div>
+</section>
+
+
+<section class="review animate-in" id="review">
+
+    <h1 class="heading">Avaliações de Clientes</h1>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+    
+            <div class="swiper-slide box">
+                <img src="image/avaliador1.svg" alt="Primeiro Avaliador">
+                <p>“Experiência incrível! A Virtus superou as expectativas com  agilidade e confiança no processo de encomenda. Tudo no prazo e excelente qualidade!”</p>
+                <h3>Paulo - Proprietário</h3>
+                <h4>Oficina Base Motors - Caxias do Sul/RS</h4>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+    
+            <div class="swiper-slide box">
+                <img src="image/avaliador2.svg" alt="Segundo Avaliador">
+                <p>“A melhor experiência de compra que já tive! Facilidade no pedido, clareza nas informações e entrega no tempo prometido. Confiança total na Virtus!”</p>
+                <h3>Jéssica - Proprietária</h3>
+                <h4>Iguaçu Auto Vidros - Nova Iguaçu/RJ</h4>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+    
+            <div class="swiper-slide box">
+                <img src="image/avaliador3.svg" alt="Terceiro Avaliador">
+                <p>“A Virtus é a melhor parceira que poderíamos ter encontrado! Sempre prontos para nos atender, com soluções rápidas e entregas pontuais!”</p>
+                <h3>Daniel - Administrador</h3>
+                <h4>Real Parabrisas - Manaus/AM</h4>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+</section>
+
+<section class="chat-section">
+    <div class="container">
+        <div class="chat__content">
+            <p class="chat__content-menssage"></p>
+            <h4 class="chat__content-title">
+                Tem alguma Dúvidas?
+            </h4>
+            <span class="chat__content-text">
+                Converse com nosso atendente.
+            </span>
+            <a href="https://wa.me/5501142000094?text=Ola,%20gostaria%20de%20tirar%20uma%20duvida" class="chat__content-link gtm-home-abrir-chat-link">Fale conosco</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container-footer">
+        <!-- Coluna 1: Logo e descrição -->
+        <div class="footer-box">
+            <a href="#" class="logo"> 
+                <img src="image/logo_virtus_branco.svg" alt="Logo Virtus">
+            </a>
+            <p class="slogan-footer">Excelência em peças premium para quem valoriza qualidade.</p>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        
+        <!-- Coluna 3: Contato -->
+        <div class="footer-box">
+            <h3 class="contato-footer">Contato</h3>
+            <div class="contato">
+                <p><i class="fas fa-phone"></i> +55 011 4200-0094</p>
+                <p><i class="fas fa-envelope"></i> virtus@virtusimportacao.com.br</p>
+                <p><i class="fas fa-map-marker-alt"></i> São Paulo - SP, Brasil</p>
+            </div>
+        </div>
+
+        <!-- Coluna 4: Redes Sociais -->
+        <div class="footer-box">
+            <h3>Siga-nos</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/virtusimport_oficial?igsh=MXdyN203cHozeTB3"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <h3>Formas de Pagamento</h3>
+            <div class="share">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-pix"></i>
+                <i class="fa-solid fa-barcode"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Virtus. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+
+<section id="whatsapp-icon-link">
+    <a href="https://wa.me/5501142000094?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20produtos.%20Poderia%20me%20ajudar?" 
+       target="_blank">
+        <figure>
+            <img id="whatsapp-icon" alt="Widget WhatsApp" 
+                 src="image/whatsapp.png" 
+                 style="width: 60px; height: 61px;">
+        </figure>
+    </a>
+    <div id="whatsapp-message">Ainda não achou sua peça? Fale conosco!</div>
+</section>
+
+<!-- Botão de voltar ao topo -->
+<button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
