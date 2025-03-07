@@ -433,7 +433,7 @@ section{
 }
 
 .home{
-    padding: 0;
+    padding: 130px 0 0 0;
 }
 
 /* Container do slider */
@@ -578,10 +578,6 @@ section{
     animation: shake 1.5s infinite ease-in-out;
     gap: 10px;
 }
-
-/* .benefit.focus img {
-    animation: pulse 1.5s infinite ease-in-out;
-} */
 
 @keyframes shake {
     0%, 100% {
