@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loop:true,
         spaceBetween: 20,
         autoplay: {
-            delay: 5000,
+            delay: 8000,
             disableOnInteraction: false,
         },
         centeredSlides: true,
@@ -131,9 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-
-
 
     document.addEventListener("DOMContentLoaded", function () {
         // Captura todos os elementos que terão o efeito
