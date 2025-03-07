@@ -440,8 +440,10 @@ section{
 .slider-container {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: auto;
+    min-height: 80vh;
     overflow: hidden;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -449,16 +451,19 @@ section{
 
 /* Estilização do slider */
 .slider {
-    position: absolute;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 
 .slide {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -467,6 +472,10 @@ section{
 /* Torna o slide visível */
 .slide.active {
     opacity: 1;
+}
+
+.slide video {
+    object-fit: cover; 
 }
 
 /* Botões de navegação */
@@ -1427,6 +1436,11 @@ section{
         padding: 0rem 10%;
     }
 
+    .slide {
+        height: auto;
+        max-height: 100vh;
+    }
+
     .benefit-wrapper img {
         width: 50px;
     }
@@ -1456,6 +1470,16 @@ section{
 @media (max-width: 1600px) {
     .container-menu {
         padding: 0rem 5%;
+    }
+
+    .slider-container {
+        min-height: 60vh;
+    }
+}
+
+@media (max-width: 1400px) {
+    .slider-container {
+        min-height: 55vh;
     }
 }
 
@@ -1509,6 +1533,15 @@ section{
     /* Remove a linha do último item */
     .container-menu .navbar a:last-child {
         border-bottom: none;
+    }
+
+    .slide {
+        height: auto;
+        max-height: 100vh;
+    }
+
+    .slider-container {
+        min-height: 48vh;
     }
 
     .beneficios .container {
@@ -1588,6 +1621,10 @@ section{
         padding: 5rem 6%;
     }
 
+    .slider-container {
+        min-height: 36vh;
+    }
+
     .heading {
         padding: 0;
         padding-bottom: 5rem;
@@ -1643,6 +1680,21 @@ section{
 
 @media (max-width: 768px) {
     
+    .slider-container {
+        min-height: 26vh;
+    }
+
+    .slide {
+        height: auto;
+        max-height: 100vh;
+    }
+
+    video.slide {
+        height: auto;
+        max-height: 100vh;
+        width: 100%;
+    }
+
     .container-menu .logo img {
         max-height: 150px;
     }
@@ -1748,6 +1800,10 @@ section{
         font-size: 1.2rem;
     }
 
+    .slider-container {
+        min-height: 19vh;
+    }
+
     .produtos .box-container .box {
         max-width: 34rem;
     }
@@ -1803,6 +1859,10 @@ section{
 
     .contact-icon {
         display: none;
+    }
+
+    .slider-container {
+        min-height: 15vh;
     }
 
     .produtos .box-container .box {
