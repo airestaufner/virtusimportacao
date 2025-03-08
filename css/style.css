@@ -931,6 +931,11 @@ section{
     padding: 20px;
 }
 
+.menor-produto {
+    height: 12rem !important; 
+    width: 60% !important;
+}
+
 .produtos .box-container .box h3{
     font-size: 2rem;
     color: #5d5c5cc7;
@@ -1672,9 +1677,14 @@ section{
     .features .box-container .box p {
         font-size: 1.2rem;
     }
+
     #whatsapp-icon {
         width: 45px;
         height: 45px;
+    }
+
+    .home-empresa .content h3, .home-empresa .content p{
+        font-size: 14px;
     }
 }
 
@@ -1804,6 +1814,10 @@ section{
         min-height: 19vh;
     }
 
+    .produtos {
+        justify-items: center;
+    }
+
     .produtos .box-container .box {
         max-width: 34rem;
     }
@@ -1826,7 +1840,7 @@ section{
     }
 
     .home-empresa .content h3, .home-empresa .content p{
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .features .box-container .box {
@@ -1865,6 +1879,10 @@ section{
         min-height: 15vh;
     }
 
+    .produtos {
+        justify-items: center;
+    }
+
     .produtos .box-container .box {
         max-width: 32rem;
     }
@@ -1888,7 +1906,7 @@ section{
     }
 
     .home-empresa .content h3, .home-empresa .content p{
-        font-size: 14px;
+        font-size: 9px;
     }
 
     #whatsapp-icon {
