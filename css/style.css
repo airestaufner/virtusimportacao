@@ -934,6 +934,7 @@ section{
 .menor-produto {
     height: 12rem !important; 
     width: 60% !important;
+    margin-bottom: 4rem !important;
 }
 
 .produtos .box-container .box h3{
